@@ -76,8 +76,11 @@
                 // Hide loading text once JVM is ready
                 document.getElementById('loading-text').style.display = 'none';
 
-                // Run the Main class from the JAR in the same directory, with dependencies in the classpath
-                cheerpjRunMain("OTPGenerator", "/app/OTPGenerator.jar:/app/jakarta.mail-2.0.3.jar:/app/jakarta.activation-api-2.1.2.jar:/app/angus-activation-2.0.1.jar");
+                // Create display inside the container
+                cheerpjCreateDisplay(-1, -1, document.getElementById('cheerpj-container'));
+
+                // Run the JAR using its manifest
+                await cheerpjRunJar("/app/OTPGenerator.jar");
                 
             } catch (error) {
                 document.getElementById('loading-text').innerText = "Error loading app.";
