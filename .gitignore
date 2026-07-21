@@ -1,0 +1,19 @@
+# Compiled class file
+*.class
+bin/
+target/
+
+# Log file
+*.log
+*.txt
+
+# IDE
+.settings/
+.idea/
+.classpath
+.project
+*.iml
+
+# Configuration and Environment Variables
+config.properties
+.env
